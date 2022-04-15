@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rotoplas Inversionistas - Eventos Relevantes</title>
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/inversionistas.css">
+		<!-- Slick / Slider CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="../js/w3-include-html.js"></script>
+	</head>
+	<body attr="eventos-relevantes">
+		<!-- Navegacion -->
+		<nav id="inversionistas-navegacion" class="menu-secundario navbar navbar-expand-xl sticky-top" w3-include-html="../inversionistas-menu-interno.html"></nav>
+		<!-- Header -->
+		<div class="container-fluid">
+			<div class="row py-3 my-3 align-items-center">
+				<!-- <div class="col-12 ps-0 | col-sm-6 | col-md-5 | col-lg-5">
+					<img class="w-100" src="../resources/images/eventos-relevantes/eventos-relevantes-header.jpg" alt="Imagen" title="Eventos Relevantes">
+				</div> -->
+				<div class="col-12 text-center">
+					<h1 class="titulos-interior mb-3">Eventos Relevantes</h1>
+				</div>
+			</div>
+			<!-- botones -->
+			<div class="row py-3 my-3">
+				<div class="col-12">
+					
+					<div id="spinner-border" class="text-center">
+						<div class="spinner-border" role="status">
+							<span class="visually-hidden">Cargando...</span>
+						</div>
+					</div>
+					<div id="tab-selector" class="text-center" style="display: none;"></div>
+				</div>
+			</div>
+			<!-- tabs -->
+			<div class="row py-3 my-3">
+				<div class="col-12 | col-lg-10 offset-lg-1">
+					<div id="tabs"></div>
+				</div>
+			</div>					
+		</div>
+		<!-- Footer -->
+		<footer w3-include-html="../inversionistas-footer-interno.html" class="row m-0 px-3 justify-content-between light"></footer>
+		<!-- Scripts -->
+			<!-- jQery -->
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+			<!-- Bootstrap -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+			<!-- Slick Js -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<!-- script -->
+			<script src="../js/inversionistas.js"></script>
+			<script src="../js/inversionistas-tabs.js"></script>
+			<script src="../js/papaparse.min.js"></script>
+			<script>
+				jQuery(document).ready(function($){
+					const wrapper = document.getElementById('tabs')
+					// funcion para llamar Papaparser
+					function getPapaparser(filepath) {
+						return new Promise(function(resolve, reject) { //return new Promise((resolve, reject) => {
+							Papa.parse(filepath, {
+								download: true,
+								complete (results) { // complete (results, file)
+									resolve(results)
+								},
+								error (err) { // error (err, file)
+									reject(err)
+								}
+							})
+						})
+					}
+					//
+					async function main(){
+						const getYearsUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRL3BvHxW67vw638IC7L6Xp6Spedc31CnYiauy1dYKg7BMuISEuU8w4ea8weB-SJs7-bZbkuvK2h7sF/pub?gid=109872485&single=true&output=csv";
+						try {
+							// obetenemos los años y las urls
+							var data = await getPapaparser(getYearsUrl)
+							data = data.data
+							console.log(data)
+							// hacemos loop para pedir la info de cada año
+							for( i=0; i < data.length; i++ ) {
+								dataLine = data[i]
+								dataCell = dataLine.join(",").split(",")
+								year = dataCell[0]
+								//console.log('año:'); console.log(year);
+								// pedimos la info del año
+								var yearContent = await getPapaparser(dataCell[1])
+								console.log('yearContent:' + year)
+								console.log(yearContent.data)
+								// creamos los botones
+								if( !document.getElementById('tab-selector-'+year)) {
+									tabSel = document.createElement('div')
+									tabSel.setAttribute('id','tab-selector-'+year)
+									tabSel.setAttribute('class','hvr-float eventos-relevantes-selector tab-selector')
+									tabSel.setAttribute('attr','tab-'+year)
+									tabSel.innerHTML = year
+									document.getElementById('tab-selector').appendChild(tabSel)
+								}
+								// creamos el tab de cada año
+								if( !document.getElementById('tab-'+year)) {
+									tab = document.createElement('div')
+									tab.setAttribute('id','tab-'+year)
+									tab.setAttribute('class','tab')
+									tab.style.display = 'none'
+									wrapper.appendChild(tab)
+								}
+								// construimos las lineas de cada tabla por cada año
+								for( j=0; j < yearContent.data.length; j++ ) {
+									var dataRow 	= yearContent.data[j];
+									var dataCell 	= dataRow.join(",").split(",")
+									// se agrega el div para el tab 
+									if( !document.getElementById('tab-'+year+'-'+dataCell[1])) {
+										tabDiv = document.createElement('div')
+										tabDiv.setAttribute('id','tab-'+year+'-'+dataCell[1])
+										tab.appendChild(tabDiv)
+									}
+									// se agrega la cabeza de la tabla
+									if( !document.getElementById('tab-head-'+year+'-'+dataCell[1])) {
+										tabHead = document.createElement('div')
+										tabHead.setAttribute('id','tab-head-'+year+'-'+dataCell[1])
+										tabHead.setAttribute('class','enventos-relevantes-cabeza')
+										tabDiv.appendChild(tabHead)
+										document.getElementById('tab-head-'+year+'-'+dataCell[1]).innerHTML = '<p class="d-inline-block m-0 p-3 light white bg-blue5" style="width:120px">'+dataCell[1]+'T'+year.slice(year.length - 2)+'</p>'
+									}
+									// se agrega la tabla
+									if( !document.getElementById('table-'+year+'-'+dataCell[1])) {
+										tabTable = document.createElement('table')
+										tabTable.setAttribute('id','table-'+year+'-'+dataCell[1])
+										tabTable.setAttribute('class','table table-striped table-borderless tabla-eventos-relevantes')
+										tabTable.innerHTML = '<tbody></tbody>'
+										tabDiv.appendChild(tabTable)
+									}
+									// verifica si esta activo y crea el tr / td
+									if(dataCell[0] === 'Activo') {
+										tabRow = document.createElement('tr')
+										tabRow.innerHTML += ''+
+											'<tr>'+
+												'<td>'+dataCell[2]+'</td>'+
+												//'<td style="width:25%;">'+dataCell[2]+'</td>'+
+												'<td>'+dataCell[3]+'</td>'+
+												'<td><a class="hvr-float" href="'+dataCell[6]+'" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="'+dataCell[5]+'"></a></td>'+
+												//'<td style="width:50px;"><a class="hvr-float" href="'+dataCell[4]+'"><img src="../resources/icono-descarga-pdf.png" height="50" alt="'+dataCell[5]+'"></a></td>'+
+											'</tr>'
+										//	
+										tabTable.getElementsByTagName('tbody')[0].appendChild(tabRow)
+										//'<td style="width:25%;">'+dataCell[1]+':'+dataCell[2]+'</td>'+
+									}
+								}
+							}
+							
+						} catch (err) {
+							console.error('Could not parse', err)
+						}
+					}
+					//
+					main().then(function(){
+						console.log('carga')
+						//
+						$('#spinner-border').fadeOut('slow', function(){
+							$('#tab-selector').fadeIn('slow', function(){
+								document.getElementById('tab-selector').getElementsByTagName('div')[0].setAttribute('class','hvr-float eventos-relevantes-selector tab-selector tab-selector-selected')
+								$('.tab').first().fadeIn('slow')
+							})
+						})
+					})
+					/*
+					(async function() {
+						const getYearsUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRL3BvHxW67vw638IC7L6Xp6Spedc31CnYiauy1dYKg7BMuISEuU8w4ea8weB-SJs7-bZbkuvK2h7sF/pub?gid=109872485&single=true&output=csv";
+						try {
+							// obetenemos los años y las urls
+							var data = await getPapaparser(getYearsUrl)
+							data = data.data
+							console.log(data)
+							// hacemos loop para pedir la info de cada año
+							for( i=0; i < data.length; i++ ) {
+								dataLine = data[i]
+								dataCell = dataLine.join(",").split(",")
+								year = dataCell[0]
+								//console.log('año:'); console.log(year);
+								// pedimos la info del año
+								var yearContent = await getPapaparser(dataCell[1])
+								console.log('yearContent:')
+								console.log(yearContent.data)
+								// creamos los botones
+								if( !document.getElementById('tab-selector-'+year)) {
+									tabSel = document.createElement('div')
+									tabSel.setAttribute('id','tab-selector-'+year)
+									tabSel.setAttribute('class','hvr-float eventos-relevantes-selector tab-selector')
+									tabSel.setAttribute('attr',year)
+									tabSel.innerHTML = year
+									document.getElementById('tab-selector').appendChild(tabSel)
+								}
+								// creamos el tab de cada año
+								if( !document.getElementById('tab-'+year)) {
+									tab = document.createElement('div')
+									tab.setAttribute('id','tab-'+year)
+									tab.setAttribute('class','tab')
+									tab.style.display = 'none'
+									wrapper.appendChild(tab)
+								}
+								// construimos las lineas de cada tabla por cada año
+								for( j=0; j < yearContent.data.length; j++ ) {
+									var dataRow 	= yearContent.data[j];
+									var dataCell 	= dataRow.join(",").split(",")
+									// se agrega el div para el tab 
+									if( !document.getElementById('tab-'+year+'-'+dataCell[1])) {
+										tabDiv = document.createElement('div')
+										tabDiv.setAttribute('id','tab-'+year+'-'+dataCell[1])
+										tab.appendChild(tabDiv)
+									}
+									// se agrega la cabeza de la tabla
+									if( !document.getElementById('tab-head-'+year+'-'+dataCell[1])) {
+										tabHead = document.createElement('div')
+										tabHead.setAttribute('id','tab-head-'+year+'-'+dataCell[1])
+										tabHead.setAttribute('class','enventos-relevantes-cabeza')
+										tabDiv.appendChild(tabHead)
+										document.getElementById('tab-head-'+year+'-'+dataCell[1]).innerHTML = '<p class="d-inline-block m-0 p-3 light white bg-blue5" style="width:120px">'+dataCell[1]+'T'+year.slice(year.length - 2)+'</p>'
+									}
+									// se agrega la tabla
+									if( !document.getElementById('table-'+year+'-'+dataCell[1])) {
+										tabTable = document.createElement('table')
+										tabTable.setAttribute('id','table-'+year+'-'+dataCell[1])
+										tabTable.setAttribute('class','table table-striped')
+										tabTable.innerHTML = '<tbody></tbody>'
+										tabDiv.appendChild(tabTable)
+									}
+									// verifica si esta activo y crea el tr / td
+									if(dataCell[0] != 'Inactivo') {
+										tabRow = document.createElement('tr')
+										tabRow.innerHTML += ''+
+											'<tr>'+
+												'<td style="width:25%;">'+dataCell[2]+'</td>'+
+												'<td>'+dataCell[3]+'</td>'+
+												'<td style="width:50px;"><a class="hvr-float" href="'+dataCell[4]+'"><img src="/resources/icono-descarga-pdf.png" height="50" alt="'+dataCell[5]+'"></a></td>'+
+											'</tr>'
+										//	
+										tabTable.getElementsByTagName('tbody')[0].appendChild(tabRow)
+										//'<td style="width:25%;">'+dataCell[1]+':'+dataCell[2]+'</td>'+
+									}
+								}
+							}
+							
+						} catch (err) {
+							console.error('Could not parse', err)
+						}
+					})().then(function(){
+						console.log('carga')
+						//
+						$('#spinner-border').fadeOut('slow', function(){
+							$('#tab-selector').fadeIn('slow', function(){
+								document.getElementById('tab-selector').getElementsByTagName('div')[0].setAttribute('class','hvr-float eventos-relevantes-selector tab-selector tab-selector-selected')
+								$('.tab').first().fadeIn('slow')
+							})
+						})
+					});
+					*/
+				})
+			</script>
+	</body>
+</html>

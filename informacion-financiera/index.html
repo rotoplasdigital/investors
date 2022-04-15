@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rotoplas Inversionistas - Información Financiera</title>
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/inversionistas.css">
+		<!-- Slick / Slider CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Js -->
+		<!-- jQery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="../js/w3-include-html.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body attr="informacion-financiera">
+		<!-- Navegacion -->
+		<nav id="inversionistas-navegacion" class="menu-secundario navbar navbar-expand-xl sticky-top" w3-include-html="../inversionistas-menu-interno.html"></nav>
+		<!-- Header -->
+		<div class="container-fluid">
+			<div class="row py-3 my-3 align-items-center">
+				<div class="col-12 ps-0 | col-sm-6 | col-md-5 | col-lg-5">
+					<img class="w-100" src="../resources/images/informacion-financiera/informacion-financiera-header.jpg" alt="Imagen" title="Información Financiera">
+				</div>
+				<div class="col-12 | col-sm-6 | col-md-5 offset-md-1 | col-lg-5 offset-lg-1">
+					<h1 class="titulos-interior mb-3">Información Financiera</h1>
+					<!-- tabs -->
+					<div class="mt-3 d-flex flex-row justify-content-center flex-wrap | justify-content-md-between">
+						<div attr="informe-trimestral" class="informacion-financiera-selector tab-selector  p-2 hvr-float | d-flex flex-column align-items-center">
+							<img src="../resources/images/informacion-financiera/informe-trimestral.svg" alt="Informe Trimestral">
+							<p>Informe Trimestral</p>
+						</div>
+						<div attr="presentaciones" class="informacion-financiera-selector tab-selector p-2 hvr-float | d-flex flex-column align-items-center">
+							<img src="../resources/images/informacion-financiera/presentaciones.svg" alt="Presentaciones">
+							<p>Presentaciones</p>
+						</div>
+						<div attr="informe-anual" class="informacion-financiera-selector tab-selector p-2 hvr-float | d-flex flex-column align-items-center">
+							<img src="../resources/images/informacion-financiera/informe-anual.svg" alt="Informe Anual">
+							<p>Informe Anual</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- tabs -->
+			<div class="row py-3 my-3">
+				<div  id="tabs" class="col-12 | col-lg-8 offset-lg-2">
+					<!-- Informe Trimestral -->
+					<div id="informe-trimestral" class="tab" style="display: none;">
+						<div class="row">
+							<div class="col-12 p-3 d-flex flex-wrap justify-content-center align-items-center | informacion-financiera-btns">
+								<div class="subtab-selector subtab-selector-selected" attr="informe-trimestral-2021">2021</div>
+								<div class="subtab-selector" attr="informe-trimestral-2020">2020</div>
+								<div class="subtab-selector" attr="informe-trimestral-2019">2019</div>
+								<div class="subtab-selector" attr="informe-trimestral-2018">2018</div>
+								<div class="subtab-selector" attr="informe-trimestral-2017">2017</div>
+								<div class="subtab-selector" attr="informe-trimestral-2016">2016</div>
+								<div class="subtab-selector" attr="informe-trimestral-2015">2015</div>
+								<div class="subtab-selector" attr="informe-trimestral-2014">2014</div>
+							</div>
+						</div>
+						<!-- 2021 -->
+						<div id="informe-trimestral-2021" class="subtab | col-12" style="display: block;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2021</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T21/PR-1T21-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T21/PR-2T21-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T21/PR-3T21-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/PR-4T21-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T21/Reporte-1T2021-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T21/Reporte-2T2021-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T21/Reporte-3T2021-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/Reporte-4T2021-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Info Splash (audio 5 min con resumen de resultados)</td>
+											<td class="text-center"><a class="hvr-float" href="https://soundcloud.com/user-994457343-467313706/rotoplas-infosplash-1t21-tiempo-de-escucha-438min" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://soundcloud.com/user-994457343-467313706/rotoplas-infosplash-1t21-tiempo-de-escucha-450min/s-kYqSn4XOuR7" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://soundcloud.com/user-994457343-467313706/rotoplas-infosplash-3t21-tiempo-de-escucha-439min?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharingg" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://soundcloud.com/user-994457343-467313706/rotoplas-infosplash-4t21-tiempo-de-escucha-410min?si=e406fea77d4d4fec9eb9b972c2800eab&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono audio"></a></td>
+										</tr>
+										<tr>
+											<td>Grabación webcast de resultados (video)</td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="#webcast-1T21"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="https://player.vimeo.com/video/579504704"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="https://player.vimeo.com/video/637958475?h=f973fccc10"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="https://player.vimeo.com/video/676014001?h=8f6334ca6d"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+										</tr>
+										<tr>
+											<td>Presentación de webcast (disponible en inglés)</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T21/Webcast-Presentation-1Q21-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T21/Webcast-Presentation-2Q21-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T21/Webcast-Presentation-3Q21-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/Webcast-Presentation-4Q21-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Transcript webcast de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T21/Transcript-1Q21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T21/Script-2Q21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T21/Script-3Q21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/Script-4Q21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2020 -->
+						<div id="informe-trimestral-2020" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2020</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T20/PR-1T20-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T20/PR-2T20-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T20/PR-3T20-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T20/PR-4T20-esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T20/Reporte-1T2020-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T20/Reporte-2T2020-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T20/Reporte-3T2020-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T20/Reporte-4T2020-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2020/20200423-139110-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2020/CC2Q20-recording.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2020/CC3Q20-recording.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2020/CC4Q20-recording.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Ver el webcast</td>
+											<td class="text-center"><a class="hvr-float" href="http://public.viavid.com/index.php?id=139110" target="_blank"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="#webcast-2T20"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="#webcast-3T20"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+											<td class="text-center"><a class="hvr-float" data-fancybox href="#webcast-4T20"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T20/Transcript-1Q20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T20/Transcript-2Q20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T20/Transcript-3Q20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T20/Transcript-4Q20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Presentación de webcast (disponible en inglés)</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T20/CC-1Q20-Presentation-23-04-20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T20/CC-2Q20-Presentation.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T20/CC-3Q20-Deck.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T20/CC-4Q20-Deck.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Excel comparativo trimestral Brasil Op. Discontinuada</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T20/comparativo-20-19.xlsx" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2019 -->
+						<div id="informe-trimestral-2019" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2019</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T19/PR-1T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T19/reporte-trimestral-2T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T19/reporte-trimestral-3T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T19/reporte-trimestral-4T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T19/1T-2019-AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T19/Reporte-XBRL-2T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T19/Reporte3T2019.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T19/Reporte-4T2019.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2019/20190425-133806-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2019/20190725-135115-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2019/20191024-136428-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2019/20200213-137813-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T19/1Q19_Script_Q&A.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T19/Script-2Q19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T19/Script_3Q19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T19/4Q19-CC-script.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2018 -->
+						<div id="informe-trimestral-2018" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2018</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T18/PR%201T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T18/PR-2T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T18/PR%203T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T18/PR_4T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T18/ifrsxbrl_AGUA_2018-1.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T18/ifrsxbrl_AGUA_2018-2.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T18/ifrsxbrl_AGUA_2018-3.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T18/ifrsxbrl_AGUA_2018-4.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T18/20180425.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T18/2018-07-24-cc-130284-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2018/20181018.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2018/20190215-132837-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T18/llamada-trimestral-1T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T18/2Q18_Transcript.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T18/3Q18_CC_Transcript.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T18/4Q18_CC_Transcript.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2017 -->
+						<div id="informe-trimestral-2017" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2017</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T17/rotoplas_pr_1T17.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T17/Rotoplas-PR-2T17.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T17/Rotoplas_PR_3T17esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T17/PR4T17vF.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T17/exportacionXBRL_T1_2017_BMV_segundo_envio.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T17/exportacionXBRL_T2_2017_BMV.PDF" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T17/exportacionXBRL_T3_2017_BMV.PDF" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T17/IFRSXBRL_AGUA_2017-4_Lhmaya1_1524860978589.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2017/2017-04-27-1Q17.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2017/rotoplast2-conference.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/informe-trimestral/2017/20171019-126531-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T17/4q17-rotoplas.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T17/1T17_Script_V_Final.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T17/2T17_Script_v2.0.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T17/3Q17_Script_vQ&A.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T17/4Q17_transcript.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2016 -->
+						<div id="informe-trimestral-2016" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2016</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T16/Grupo_Rotoplas_Reporta_Resultados_del_1T16.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T16/Grupo_Rotoplas_Reporta_Resultados_del_2T16.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T16/grupo-rotoplas-reporta-resultados-del-3T16.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T16/Rotoplas_4T16.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T16/T1_2016_AGUA_reportado.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T16/T2_2016_AGUA_enviado.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T16/T3-BMV.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T16/T4%202016%20AGUA.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T16/2016-04-26-1Q16.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T16/2016-07-20-2Q16.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T16/2016-10-20-3Q16.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T16/2017-02-17-4Q16.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T16/26-04-16-Transcript-1Q16.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T16/20-07-16-Transcript-2Q16.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T16/grupo-rotoplas-transcript-T316.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T16/4T16-Script-VF.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2015 -->
+						<div id="informe-trimestral-2015" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2015</td>
+											<td class="table-head-subtitle">1T</td>
+											<td class="table-head-subtitle">2T</td>
+											<td class="table-head-subtitle">3T</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T15/PR_1T15_Final.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T15/PR_2T15_Final.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T15/PR_3T15_Final_Espanol.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T15/4T15yFY15Resultados.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T15/ReportesT1_2015.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T15/ReportesT2_2015_2doEnvio.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T15/Reporte_3T15_BMV.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T15/BMVENG4T15yFY15Resultados.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T15/Audio_3Q15.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T15/Transcript_1T15.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T15/Final_Transcrip_2Q15.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T15/Final_transcript_3Q15.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T15/Grupo%20Rotoplas%204Q15%20and%20FY15%20Results%20Transcript.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2014 -->
+						<div id="informe-trimestral-2014" class="subtab | col-12" style="display: none;">
+							<div class="table-responsive">
+								<table class="table table-striped table-borderless">
+									<thead>
+										<tr>
+											<td class="table-head-title">2014</td>
+											<td class="table-head-subtitle">4T</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reporte Trimestral</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T14/PR4T14Final.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Reporte XBRL</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T14/Reporte_4T14_BMV.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+										<tr>
+											<td>Vuelve a escuchar la conferencia</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T14/Audio_Conferencia_4T14.mp3" target="_blank"><img src="../resources/icono-audio.png" height="50" alt="Icono Audio"></a></td>
+										</tr>
+										<tr>
+											<td>Conferencia de resultados</td>
+											<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T14/4Q14_transcript.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- videos 2021  1q:579504704 2Q:637958475 https://vimeo.com/637958475 -->
+						<video id="webcast-1T21" width="640" height="320" style="display: none;" controls>
+							<source src="https://rotoplas.com/inversionistas/rtp_resources/1T21/Rotoplas-1Q21-Earnings-Conference-Call.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<!-- videos 2020 -->
+						<video id="webcast-2T20" width="640" height="320" style="display: none;" controls>
+							<source src="https://rotoplas.com/inversionistas/rtp_resources/2T20/CC2Q20-recording.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video id="webcast-3T20" width="640" height="320" style="display: none;" controls>
+							<source src="https://rotoplas.com/inversionistas/rtp_resources/3T20/Rotoplas-Third-Quarter-2020-Earnings-Conference-Call.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video id="webcast-4T20" width="640" height="320" style="display: none;" controls>
+							<source src="https://rotoplas.com/inversionistas/rtp_resources/4T20/Rotoplas-4Q20-Earnings-Conference-Call.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<!-- Presentaciones -->
+					<div id="presentaciones" class="tab" style="display: none;">
+						<div class="row">
+							<div class="col-12 p-3 d-flex flex-wrap justify-content-center align-items-center | informacion-financiera-btns">
+								<div class="subtab-selector subtab-selector-selected" attr="presentaciones-2021">2021</div>
+								<div class="subtab-selector" attr="presentaciones-2020">2020</div>
+								<div class="subtab-selector" attr="presentaciones-2019">2019</div>
+								<div class="subtab-selector" attr="presentaciones-2018">2018</div>
+								<div class="subtab-selector" attr="presentaciones-2017">2017</div>
+								<div class="subtab-selector" attr="presentaciones-2016">2016</div>
+								<div class="subtab-selector" attr="presentaciones-2015">2015</div>
+								<!-- <div class="subtab-selector" attr="presentaciones-conferencias">Conferencias</div> -->
+							</div>
+						</div>
+						<!-- 2021 -->
+						<div id="presentaciones-2021" class="subtab | col-12" style="display: block;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2021</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 4T21</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/Presentacion-Corporativa-4T21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 3T21 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T21/Script-3Q21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Transcript AGUA Day 2021 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/Transcript-AGUA-Day-2021.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>AGUA DAY 2021 (video solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" data-fancybox href="#aguaday2021"><img src="../resources/icono-video.png" height="50" alt="Icono Video"></a></td>
+									</tr>
+									<tr>
+										<td>AGUA DAY 2021 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T21/AGUA-Day2021-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 3T21</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T21/Presentacion-Corporativa-3T21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 2T21</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T21/Presentacion-Corporativa-2T21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 2T21 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T21/Webcast-Presentation-2Q21-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 1T21</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T21/Presentacion-Corporativa-1T21.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 1T21 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T21/Webcast-Presentation-1Q21-web.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<!-- 2020 -->
+						<div id="presentaciones-2020" class="subtab | col-12" style="display: none;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2020</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 4T20</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T20/Presentacion-Corporativa-4T20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 4T20 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T20/CC-4Q20-Deck.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 3T20 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T20/CC-3Q20-Deck.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 3T20</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion-Corporativa-3T20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa ASG</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/ESG-Presentacion-Corporativa-2T20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 2T20 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T20/CC-2Q20-Presentation.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 2T20</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion-Corporativa-2T20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 1T20</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion-Corporativa-1T20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 1T20 (disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T20/CC-1Q20-Presentation-23-04-20.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2019 -->
+						<div id="presentaciones-2019" class="subtab | col-12" style="display: none;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2019</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Informe anual integrado 2019</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2019/IA_rotoplas_2019.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 4T19</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion-Corporativa-4T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 4T19 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T19/CC-4Q19-Presentation-13-02-2020.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 3T19</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion-Corporativa-3T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 3T19 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T19/CC-3Q19-Presentation.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 2T19</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/presentacion-corporativa-2T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 2T19 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T19/CC-2Q19-Presentation-viavid.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Evento AGUA 2019</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/AGUA_2019_V06.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 1T19</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/presentacion-corporativa-1T19.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 1T19 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/1T19/CC_1Q19_Presentation_VIAVID_v2.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2018 -->
+						<div id="presentaciones-2018" class="subtab | col-12" style="display: none;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2018</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 4T18</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion-Corporativa-4T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 4T18 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/4T18/CC_4Q18_presentacion.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 3T18</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Presentacion_Corporativa_3T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 3T18 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T18/CC_3Q18_Presentacion_V2.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 2T18</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/presentacion_inversionistas_2T18.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación webcast 2T18 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/2T18/CC_2Q18_Presentación.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2017 -->
+						<div id="presentaciones-2017" class="subtab | col-12" style="display: none;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2017</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Presentación webcast 3T17 (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T17/3Q17_CC_presentation.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Presentación Corporativa Rotoplas 2017</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/3T17/inversionistas-BMV-3T17.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2016 -->
+						<div id="presentaciones-2016" class="subtab | col-12" style="display: none;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2016</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Santander | Jan | Cancun | XX Santander Latin American Conference (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Investor-presentation-Santander.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Gabelli | Feb | NY | 26TH Annual Pump | Valve And Water Systems Symposium (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Gabelli-Pump-Valve-Water-Systems-Symposium2.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2015 -->
+						<div id="presentaciones-2015" class="subtab | col-12" style="display: none;">
+							<table class="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<td class="table-head-title" colspan="2">2015</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>UBS December NY Global Emerging Markets (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/UBS%20December%20NY%20Global%20Emerging%20Markets.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>BAML Nov Mex Year Ahead Conference (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/BAML%20Nov%20Mex%20Year%20Ahead%20Conference.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>UBS October SRI Europe (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/UBS%20October%20SRI%20Europe.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>HSBC June NY LatAm SMid Cap (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/HSBC%20June%20NY%20LatAm%20SMid%20Cap.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>DB June Mex SMid Cap Forum (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/DB%20June%20Mex%20SMid%20Cap%20Forum.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>BAML MAY LND LatAm Growth Opportunities Conference (solo disponible en inglés)</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/BAML%20May%20Lnd%20LatAm%20Growth%20Opportunities%20Conference%202015.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>DB MAY MEX MINI NDR</td>
+										<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/DB%20May%20Mex%20Mini%20NDR.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- conferencias
+							<div id="presentaciones-conferencias" class="subtab | col-12" style="display: none;">
+								<div class="table-responsive">
+									<table class="table table-striped table-borderless">
+										<thead>
+											<tr>
+												<td class="table-head-title" colspan="2">CONFERENCIAS</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Agua day</td>
+												<td class="text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/presentaciones/Agua_Day_Espanol.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						-->
+						<!-- videos -->
+						<div id="aguaday2021" style="display: none;" class="embed-container">
+							<iframe src="https://player.vimeo.com/video/656714533?h=111e0eb17f" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+						</div>
+					</div>
+					<!-- Informe Anual -->
+					<div id="informe-anual" class="tab" style="display: none;">
+						<!-- 2020 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2020.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2020">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe anual integrado 2020</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2020/IA_rotoplas_2020.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual 2020 BMV </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2020/Reporte-Anual-BMV-2020.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Estados financieros consolidados</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2020/GRUPO-ROTOPLAS-EFC-2020.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2019 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2019.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2019">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe anual integrado 2019</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2019/IA_rotoplas_2019.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual 2019 BMV </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2019/Reporte-Anual-BMV-2019.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Estados financieros consolidados</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2019/GRUPO-ROTOPLAS-EFC-2019.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2018 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2018.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2018">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe anual integrado 2018</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2018/IA_Rotoplas_2018.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual 2018 BMV </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2018/reporte_bmv_2018.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Estados financieros consolidados</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2018/financieros_rotoplas_esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2017 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2017.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2017">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe interactivo a los accionistas 2017 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="http://birotoplas.com/informe2017/" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Informe integrado 2017 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2017/IA_Rotoplas_2017_FINAL.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual 2017 BMV </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2017/reporte_bmv_2017.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Estados financieros consolidados 2017 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2017/42579_grupo_rotoplas_efconsol_2017.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Nuestra contribución a los objetivos de desarrollo sostenible 2017 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2017/informe_ods_junio2018.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte del bono sustentable 2017 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2017/bono_Rotoplas_2017_esp.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2016 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2016.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2016">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe interactivo a los accionistas 2016 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="http://birotoplas.com/informe2016/" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Informe integrado 2016 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2016/informe-anual-integrado-rotoplas-2016.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual 2016 BMV</td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2016/reporte-anual-2016-bmv.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Estados financieros consolidados 2016 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2016/grupo-rotoplas-estados-financieros-consolidado-2016.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2015 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2015.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2015">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe interactivo a los accionistas 2015 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="http://generadordeideas.com.mx/proyectos/RotoplasINF15/" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Informe integrado 2015 - GRI 4 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2015/grupo-rotoplas-informe-anual-nuestro-impulso.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual 2015 BMV </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2015/reporte-anual-2015-bmv.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Estados financieros dictaminados 2015 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2015/AGUA_2015_EFin.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 2014 -->
+						<div class="d-flex align-items-start">
+							<img class="tabla-informe-anual-imagen" src="../resources/images/informacion-financiera/informe-2014.jpg" alt="Informe Anual Imagen" title="Informe Anual Integrado 2014">
+							<table class="table table-striped table-borderless tabla-informe-anual">
+								<tbody>
+									<tr>
+										<td>Informe anual 2014 </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2014/Rotoplas_IA_2014_30abril_pages_nofirmas.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Reporte anual BMV </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2014/ReporteAnual2014VFINAL_sinfirmas.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+									<tr>
+										<td>Prospecto de colocación </td>
+										<td class="tabla-informe-anual-icono text-center"><a class="hvr-float" href="https://rotoplas.com/inversionistas/rtp_resources/reporte-anual/2014/Prospecto_Final_con_Firmas.pdf" target="_blank"><img src="../resources/icono-descarga-pdf.png" height="50" alt="Icono Descarga"></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer w3-include-html="../inversionistas-footer-interno.html" class="row m-0 px-3 justify-content-between light"></footer>
+		<!-- Scripts -->
+			<!-- Bootstrap -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+			<!-- Slick Js -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<!-- script -->
+			<script src="../js/inversionistas.js"></script>
+			<script src="../js/inversionistas-tabs.js"></script>
+			<script src="../js/papaparse.min.js"></script>
+	</body>
+</html>

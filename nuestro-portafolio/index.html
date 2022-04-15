@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rotoplas Inversionistas - Nuestro portafolio</title>
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/inversionistas.css">
+		<link rel="stylesheet" href="../css/portafolio.css">
+		<!-- Slick / Slider CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="../js/w3-include-html.js"></script>
+	</head>
+	<body attr="nuestro-portafolio">
+		<!-- Navegacion -->
+		<nav id="inversionistas-navegacion" class="menu-secundario navbar navbar-expand-xl sticky-top" w3-include-html="../inversionistas-menu-interno.html"></nav>
+		<!-- Header -->
+		<div class="container-fluid">
+			<div class="row pt-3 mt-3 align-items-center">
+				<div class="col-12 ps-0 | col-sm-6 | col-md-5 | col-lg-5">
+					<img class="w-100" src="../resources/images/nuestro-portafolio/nuestro-portafolio-head.jpg" alt="Imagen" title="Nuestro portafolio">
+				</div>
+				<div class="col-12 | col-sm-6 | col-md-5 offset-md-1 | col-lg-5 offset-lg-1">
+					<h1 class="titulos-interior mb-3">Nuestro portafolio</h1>
+					<p>La oferta de valor incluye un portafolio con 27 líneas de productos, una plataforma de servicios con diversas soluciones y un negocio de comercio electrónico.</p>
+					<!-- Botones -->
+					<div class="mt-3 d-flex flex-row justify-content-evenly flex-wrap">
+						<div attr="productos" class="informacion-financiera-selector tab-selector  p-2 hvr-float | d-flex flex-column align-items-center">
+							<img src="../resources/images/nuestro-portafolio/productos.svg" alt="Productos">
+							<p class="text-center">Productos</p>
+						</div>
+						<div attr="servicios" class="informacion-financiera-selector tab-selector p-2 hvr-float | d-flex flex-column align-items-center">
+							<img src="../resources/images/nuestro-portafolio/servicios.svg" alt="Servicios">
+							<p class="text-center">Servicios</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Tabs -->
+			<div class="row">
+				<!-- productos -->
+				<div class="col-12 | tab" id="productos" style="display: none;">
+					<div class="row justify-content-center">
+						<!-- Regiones botones -->
+						<div class="col-12 d-flex flex-wrap justify-content-center | justify-content-md-start producto-pais-wrapper">
+							<div class="producto-pais producto-pais-seleccion" data="MX">México</div>
+							<div class="producto-pais" data="AR">Argentina</div>
+							<div class="producto-pais" data="PE">Perú</div>
+							<!-- <div class="producto-pais" data="BR">Brasil</div> -->
+							<!-- <div class="producto-pais" data="US">USA</div> -->
+							<div class="producto-pais" data="CAM">Centroamérica</div>
+							<a class="producto-pais-btn text-decoration-none" href="https://acuantia.com" target="_blank">Estados Unidos</a>
+						</div>
+						<!-- Tabs botones -->
+						<div class="col-12 d-flex flex-wrap justify-content-center mb-3 | justify-content-md-start unidad-tabs">
+							<div class="unidad-tab MX AR CAM PE unidad-tab-selected" data="almacenamiento">Almacenamiento</div>
+							<div class="unidad-tab MX AR CAM" data="agroindustria">Agroindustria</div>
+							<div class="unidad-tab MX CAM PE" data="conduccion">Conducción</div>
+							<div class="unidad-tab" data="tuberia">Tubería</div>
+							<div class="unidad-tab MX CAM PE" data="purificacion">Purificación</div>
+							<div class="unidad-tab MX AR CAM PE" data="tratamiento">Tratamiento</div>
+							<div class="unidad-tab MX AR CAM PE" data="calentamiento">Calentamiento</div>
+						</div>
+						<!-- Tabs nodos -->
+						<div class="row justify-content-center pb-3 mb-3 px-0">
+							<!-- Almacenamiento nodo -->
+							<div id="g-almacenamiento" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Almacenamiento</p>
+										<p>Esta línea de productos está diseñada para el almacenamiento de agua en grandes volúmenes, cubriendo distintas necesidades de abastecimiento.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-almacenamiento" src="../resources/images/nuestro-portafolio/soluciones-productos/almacenamiento-head.jpg" alt="Almacenamiento" title="Almacenamiento">
+									</div>
+								</div>
+								<!-- <div class="row justify-content-center"> -->
+									<!-- col-10  -->
+									<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+										<!-- MEXICO -->
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tinaco.jpg" alt="Imagen">
+												<p>Tinaco</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento/tinaco/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/cisterna.jpg" alt="Imagen">
+												<p>Cisterna</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento/cisterna/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/captador-rural.jpg" alt="Imagen">
+												<p>Captador Pluvial Rural</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/mejoramiento/captadores/captador-pluvial-rural/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/captador-urbano.jpg" alt="Imagen">
+												<p>Captador Pluvial Urbano</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/mejoramiento/captadores/captador-pluvial-urbano/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/accesorios.jpg" alt="Imagen">
+												<p>Accesorios Rotoplas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/categoria-producto/accesorios/" target="_blank">Ver producto</a>
+											</div>
+										<!-- ARGETINA -->
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/tanques.jpg" alt="Imagen">
+												<p>Tanques</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/categoria-producto/tanques/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/cisternas.jpg" alt="Imagen">
+												<p>Cisternas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/categoria-producto/disponemos-el-agua/cisternas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/accesorios-dispositivo-acondicionamiento.jpg" alt="Imagen">
+												<p>Accesorios y Dispositivo de Acondicionamiento de Agua</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/categoria-producto/accesorios/" target="_blank">Ver producto</a>
+											</div>
+										<!-- PERU -->
+											<div class="productos-nodo PE">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/tanques.jpg" alt="Imagen">
+												<p>Tanques</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/tanques/138?PS=21&map=c,productClusterIds" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo PE">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/cisternas.jpg" alt="Imagen">
+												<p>Cisternas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/cisterna/138?PS=21&map=c,productClusterIds" target="_blank">Ver producto</a>
+											</div>
+										<!-- CENTROAMERICA -->
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tanque.jpg" alt="Imagen">
+												<p>Tanque</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/tanque/" target="_blank">Ver producto</a>
+											</div>
+
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/cisterna.jpg" alt="Imagen">
+												<p>Cisterna</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/cisterna/" target="_blank">Ver producto</a>
+											</div>
+
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tamboplas.jpg" alt="Imagen">
+												<p>Tamboplas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/tamboplas/" target="_blank">Ver producto</a>
+											</div>
+
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/aljibes.jpg" alt="Imagen">
+												<p>Aljibes</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/aljibes/" target="_blank">Ver producto</a>
+											</div>
+
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/captacion-pluvial.jpg" alt="Imagen">
+												<p>Sistema de captación pluvial</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/sistema-captacion-pluvial/" target="_blank">Ver producto</a>
+											</div>
+
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/accesorios-tanques.jpg" alt="Imagen">
+												<p>Accesorios De Tanques</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/categoria-producto/accesorios-de-tanques/" target="_blank">Ver producto</a>
+											</div>
+									</div>
+								<!-- </div> -->
+							</div>
+							<!-- Agroindustria nodo -->
+							<div id="g-agroindustria" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Agroindustria</p>
+										<p>Soluciones para el campo y la industria en almacenamiento, transporte y conducción de agua, alimentos y sustancias químicas.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-agroindustria" src="../resources/images/nuestro-portafolio/soluciones-productos/agroindustria-head.jpg" alt="Agroindustria" title="Agroindustria">
+									</div>
+								</div>
+									<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+										<!-- MEXICO -->
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tanque-almacenamiento.jpg" alt="Imagen">
+												<p>Tanque de almacenamiento</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento-especializado/tanque-de-almacenamiento/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tolvas.jpg" alt="Imagen">
+												<p>Tolvas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento-especializado/tolvas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tanque-nodriza.jpg" alt="Imagen">
+												<p>Tanque Nodriza</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento-especializado/tanque-nodriza/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/comederos-bebederos.jpg" alt="Imagen">
+												<p>Comederos y Bebederos</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento-especializado/comederos-y-bebederos/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tanque-vertical-cerrado.jpg" alt="Imagen">
+												<p>Tanque Vertical Cerrado</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/almacenamiento-especializado/tanque-vertical/" target="_blank">Ver producto</a>
+											</div>
+										<!-- ARGENTINA -->
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/tanques-interiores.jpg" alt="Imagen">
+												<p>Tanques de agua para interiores</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/agroindustria/producto/tanques-para-interiores/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/tanques-exteriores.jpg" alt="Imagen">
+												<p>Tanques de agua para exteriores</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/agroindustria/producto/tanques-para-exteriores/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/tanques-horizontales.jpg" alt="Imagen">
+												<p>Tanques de agua horizontales</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/agroindustria/producto/tanques-horizontales/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/tanques-antiincendio.jpg" alt="Imagen">
+												<p>Tanques de agua anti incendio</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/agroindustria/producto/tanques-anti-incendio/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ar/accesorios-banjo.jpg" alt="Imagen">
+												<p>Accesorios Banjo</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/agroindustria/producto/accesorios-banjo/" target="_blank">Ver producto</a>
+											</div>
+										<!-- CENTROAMERICA -->
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tanques-almacenamiento.jpg" alt="Imagen">
+												<p>Tanques de almacenamiento</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/tanques-de-almacenamiento/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tanque-bicapa.jpg" alt="Imagen">
+												<p>Tanque Bicapa</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/tanque-bicapa/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tolvas.jpg" alt="Imagen">
+												<p>Tolvas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/tolvas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/nodrizas.jpg" alt="Imagen">
+												<p>Nodrizas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/nodrizas-2/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/comederos-bebederos.jpg" alt="Imagen">
+												<p>Comederos y bebederos</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/comederos-y-bebederos/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tanques-verticales.jpg" alt="Imagen">
+												<p>Tanques verticales cerrados</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/tanques-verticales-cerrados/" target="_blank">Ver producto</a>
+											</div>
+									</div>
+							</div>
+							<!-- Conduccion nodo -->
+							<div id="g-conduccion" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Conducción</p>
+										<p>Tubería hidráulica que garantiza cero fugas, ya que fusiona las uniones y las convierte en una sola pieza de gran resistencia, gracias a su avanzado sistema de termofusión. Además, abarca una gran variedad de tubos, conexiones y herramientas para cubrir todas las necesidades de una instalación hidráulica en viviendas unifamiliares, de interés social y residenciales, edificios de altura, industrias, embarcaciones y otros.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-conduccion" src="../resources/images/nuestro-portafolio/soluciones-productos/conduccion-head.jpg" alt="Conducción" title="Conducción">
+									</div>
+								</div>
+									<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+										<!-- MEXICO -->
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tuboplus-hidraulico.jpg" alt="Imagen">
+												<p>Tuboplus Hidráulico (PP-R)</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/conduccion/tuboplus-hidraulico/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tuboplus-alta-presion.jpg" alt="Imagen">
+												<p>Tuboplus Alta Presión (PPR-CT)</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/conduccion/tuboplus-alta-presion/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/bombas-rotoplas.jpg" alt="Imagen">
+												<p>Bombas Rotoplas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/categoria-producto/bombas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/valvulas.jpg" alt="Imagen">
+												<p>Válvulas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/categoria-producto/valvulas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tuboplus-ultraflex.jpg" alt="Imagen">
+												<p>Tuboplus Ultraflex PEX-a</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/tuboplus-ultraflex/" target="_blank">Ver producto</a>
+											</div>
+										<!-- PERU -->
+											<div class="productos-nodo PE">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/tubos-conexiones.jpg" alt="Imagen">
+												<p>Tubos y conexiones</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/fusion" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo PE">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/linea-hidraulica.jpg" alt="Imagen">
+												<p>Línea Hidráulica Roscada</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/tubo-roscada" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo PE">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/herramientas.jpg" alt="Imagen">
+												<p>Herramientas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/145?PS=20&map=productClusterIds&O=OrderByReleaseDateDESC" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo PE">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/bombas-accesorios.jpg" alt="Imagen">
+												<p>Bombas y accesorios</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/bombas-y-accesorios?PS=21&O=OrderByPriceASC" target="_blank">Ver producto</a>
+											</div>
+										<!-- CENTROAMERICA -->
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/tuboplus.jpg" alt="Imagen">
+												<p>Tuboplus</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/tuboplus/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/bombas.jpg" alt="Imagen">
+												<p>Bombas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/categoria-producto/acercamos-el-agua/bombas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo CAM">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/contrallave.jpg" alt="Imagen">
+												<p>Contrallave Válvula de Control Roscable 2 en 1</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/contrallave-valvula-de-control-roscable-2-en-1/" target="_blank">Ver producto</a>
+											</div>
+									</div>
+							</div>
+							<!-- Purificacion nodo -->
+							<div id="g-purificacion" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Purificación</p>
+										<p>Las soluciones de purificación de Rotoplas como los filtros y purificadores de agua cuentan con diseño y tecnología de vanguardia para proveer agua purificada y cristalina, libre de partículas, tierra, sedimentos y metales pesados. De esta forma se cuenta con agua ideal para beber, cocinar y preparar alimentos.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-purificacion" src="../resources/images/nuestro-portafolio/soluciones-productos/purificacion-head.jpg" alt="Purificación" title="Purificación">
+									</div>
+								</div>
+								<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+									<!-- MEXICO -->
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/purificador-sobre-tarja.jpg" alt="Imagen">
+											<p>Purificador Hydro-Pur® de Carbón Activado (Sobre-Tarja)</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/purificador-sobre-tarja/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/purificador-bajo-tarja.jpg" alt="Imagen">
+											<p>Purificador Hydro-Pur® de Carbón Activado (Bajo-Tarja)</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/purificador-bajo-tarja/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/purificador-osmosis-inversa.jpg" alt="Imagen">
+											<p>Purificador de Osmosis Inversa</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/purificador-de-osmosis-inversa/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/purificador-alcalinizador.jpg" alt="Imagen">
+											<p>Purificador y Alcalinizador</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/purificador-y-alcalinizador/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/filtro-refrigerador.jpg" alt="Imagen">
+											<p>Filtro de Refrigerador un año</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/filtro-de-refrigerador/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/cartuchos-repuestos.jpg" alt="Imagen">
+											<p>Cartuchos y Repuestos para Filtros Rotoplas</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/categoria-producto/cartuchos/" target="_blank">Ver producto</a>
+										</div>
+									<!-- PERU -->
+										<div class="productos-nodo PE">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/filtros-purificadores.jpg" alt="Imagen">
+											<p>Filtros y Purificadores</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/filtros-y-purificadores?PS=21&O=OrderByReleaseDateDESC" target="_blank">Ver producto</a>
+										</div>
+									<!-- CENTROAMERICA -->
+									<div class="productos-nodo CAM">
+										<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/ca-purificacion.jpg" alt="Imagen">
+										<p>Filtros y Purificadores</p>
+										<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/purificador-sobre-lavatrastos/" target="_blank">Ver producto</a>
+									</div>
+								</div>
+							</div>
+							<!-- Tratamiento nodo -->
+							<div id="g-tratamiento" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Tratamiento</p>
+										<p>Estas son alternativas diseñadas para cubrir necesidades de saneamiento en áreas de rezago, las cuales contribuyen a elevar la calidad de vida de los usuarios propiciando espacios de higiene, además de favorecer el desarrollo de pequeñas unidades de producción como en el caso del Sistema para Riego Agrícola tipo Huerto Familiar.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-tratamiento" src="../resources/images/nuestro-portafolio/soluciones-productos/tratamiento-head.jpg" alt="Tratamiento" title="Tratamiento">
+									</div>
+								</div>
+								<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+									<!-- MEXICO -->
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/biodigestor.jpg" alt="Imagen">
+											<p>Biodigestor</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/tratamiento/biodigestor/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/bano-humedo.jpg" alt="Imagen">
+											<p>Baño Húmedo</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/tratamiento/bano-humedo/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/sistema-riego.jpg" alt="Imagen">
+											<p>Sistema para Riego Agrícola tipo Huerto Familiar</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/tratamiento/sistema-para-riego-agricola-tipo-huerto-familiar/" target="_blank">Ver producto</a>
+										</div>
+									<!-- ARGENTINA -->
+										<div class="productos-nodo AR">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/biodigestor.jpg" alt="Imagen">
+											<p>Biodigestor Autolimpiable</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.ar/catalogo/biodigestor-autolimpiable/" target="_blank">Ver producto</a>
+										</div>
+									<!-- PERU -->
+										<div class="productos-nodo PE">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/biodigestores.jpg" alt="Imagen">
+											<p>Biodigestores</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/biodigestor?PS=21&O=OrderByPriceASC" target="_blank">Ver producto</a>
+										</div>
+									<!-- CENTROAMERICA -->
+										<div class="productos-nodo CAM">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/biodigestor-autolimpiable.jpg" alt="Imagen">
+											<p>Biodigestor Autolimpiable</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/biodigestor-autolimpiable/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo CAM">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/fosa-septica.jpg" alt="Imagen">
+											<p>Fosa Séptica</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/fosa-septica/" target="_blank">Ver producto</a>
+										</div>
+										<div class="productos-nodo CAM">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/bano-humedo.jpg" alt="Imagen">
+											<p>Baño Húmedo</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/catalogo/bano-humedo/" target="_blank">Ver producto</a>
+										</div>
+								</div>
+							</div>
+							<!-- Calentamiento nodo -->
+							<div id="g-calentamiento" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Calentamiento</p>
+										<p>Soluciones para el calentamiento del agua y el ahorro de energía y gas.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-calentamiento" src="../resources/images/nuestro-portafolio/soluciones-productos/calentamiento-head.jpg" alt="Calentamiento" title="Calentamiento">
+									</div>
+								</div>
+								<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+									<!-- MEXICO -->
+										<div class="productos-nodo MX">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/ecoducha-regadera-electrica.jpg" alt="Imagen">
+											<p>EcoDucha Regadera Eléctrica</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/calentamiento/regadera-electrica/" target="_blank">Ver producto</a>
+										</div>
+									<!-- PERU -->
+										<div class="productos-nodo PE">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/pe/termas.jpg" alt="Imagen">
+											<p>Termas</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://www.rotoplas.com.pe/termas?PS=21&O=OrderByPriceASC" target="_blank">Ver producto</a>
+										</div>
+									<!-- CENTROAMERICA -->
+										<div class="productos-nodo CAM">
+											<img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/ducha-electrica.jpg" alt="Imagen">
+											<p>Ducha eléctrica</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/categoria-producto/ducha-electrica/" target="_blank">Ver producto</a>
+										</div>
+									<!-- ARGENTINA-->
+										<div class="productos-nodo AR">
+											<!-- <img src="../resources/images/nuestro-portafolio/soluciones-productos/ca/ducha-electrica.jpg" alt="Imagen">
+											<p>Ducha eléctrica</p>
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplascentroamerica.com/categoria-producto/ducha-electrica/" target="_blank">Ver producto</a> -->
+											<a class="rtp-btn bg-blue2 white hvr-float" href="https://senorial.com.ar" target="_blank">Ver más</a>
+										</div>
+								</div>
+							</div>
+							<!-- Tuberia nodo -->
+							<div id="g-tuberia" class="col-12 unidad-tab-nodo px-0">
+								<div class="tab-nodo-header d-flex align-items-center">
+									<div class="col-12 p-3 | col-md-5 offset-md-1">
+										<p class="fs40 light blue2 mt-0">Tubería</p>
+										<p>Tubería hidráulica que garantiza cero fugas, ya que fusiona las uniones y las convierte en una sola pieza de gran resistencia, gracias a su avanzado sistema de termofusión. Además, abarca una gran variedad de tubos, conexiones y herramientas para cubrir todas las necesidades de una instalación hidráulica en viviendas unifamiliares, de interés social y residenciales, edificios de altura, industrias, embarcaciones y otros.</p>
+									</div>
+									<div class="d-none | d-md-block col-md-4 offset-md-2">
+										<img class="w-100" id="head-tuberia" src="../resources/images/nuestro-portafolio/soluciones-productos/conduccion-head.jpg" alt="Conducción" title="Conducción">
+									</div>
+								</div>
+									<div class="text-center d-flex flex-row flex-wrap justify-content-evenly align-items-center">
+										<!-- ARGENTINA -->
+											<div class="productos-nodo AR">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tuboplus-hidraulico.jpg" alt="Imagen">
+												<p>Tuboplus Hidráulico (PP-R)</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/conduccion/tuboplus-hidraulico/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tuboplus-alta-presion.jpg" alt="Imagen">
+												<p>Tuboplus Alta Presión (PPR-CT)</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/conduccion/tuboplus-alta-presion/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/bombas-rotoplas.jpg" alt="Imagen">
+												<p>Bombas Rotoplas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/categoria-producto/bombas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/valvulas.jpg" alt="Imagen">
+												<p>Válvulas</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/categoria-producto/valvulas/" target="_blank">Ver producto</a>
+											</div>
+											<div class="productos-nodo MX">
+												<img src="../resources/images/nuestro-portafolio/soluciones-productos/mx/tuboplus-ultraflex.jpg" alt="Imagen">
+												<p>Tuboplus Ultraflex PEX-a</p>
+												<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/tuboplus-ultraflex/" target="_blank">Ver producto</a>
+											</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- servicios -->
+				<div class="col-12 | tab" id="servicios" style="display: none;">
+					<div class="row justify-content-center">
+						<!-- Servicios botones -->
+						<div class="col-12 d-flex flex-wrap mb-3 justify-content-center | justify-content-md-start | servicios-btns">
+							<div attr="plantas" class="subtab-selector subtab-selector-selected">Plantas de tratamiento</div>
+							<div attr="bebbia" class="subtab-selector">bebbia</div>
+							<div attr="bebederos" class="subtab-selector">Bebederos</div>
+							<div attr="rieggo" class="subtab-selector">Rieggo</div>
+							<div attr="plomerisimo" class="subtab-selector">Plomerísimo</div>
+						</div>
+						<!-- Plantas -->
+						<div id="plantas" class="subtab col-12" style="display: block;">
+							<div class="row align-items-center">
+								<div class="col-12 col-lg-5 offset-lg-1 my-3">
+									<p class="fs40 light blue2 mt-0">Plantas de tratamiento y reciclaje de agua en México y Brasil</p>
+									<p class="">Generamos soluciones ecológicas para el tratamiento y reutilización de agua residual, potabilización y desmineralización, así como la purificación del agua. Atendemos los principales segmentos: comercial, industrial y municipal.</p>
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-0 my-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-01.jpg" alt="Plantas de tratamiento de agua" title="Plantas de tratamiento de agua">
+								</div>
+							</div>
+							<div class="row justify-content-md-center my-3 fs30 light grey">
+								<div class="col-12 | col-sm-8">
+									<p class="text-center mt-3 py-3">Los procesos que realizamos con biológicos, químicos y su respectiva combinación en proyectos de:</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 text-center">
+									<div class="plantas-nodo hvr-float">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-02.jpg" alt="Tratamiento de aguas residuales" title="Tratamiento de aguas residuales">
+										<p>Tratamiento de aguas residuales</p>
+									</div>
+
+									<div class="plantas-nodo hvr-float">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-03.jpg" alt="Potabilización" title="Potabilización">
+										<p>Potabilización</p>
+									</div>
+
+									<div class="plantas-nodo hvr-float">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-04.jpg" alt="Purificación" title="Purificación">
+										<p>Purificación</p>
+									</div>
+
+									<div class="plantas-nodo hvr-float">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-05.jpg" alt="Desalinización" title="Desalinización">
+										<p>Desalinización</p>
+									</div>
+
+									<div class="plantas-nodo hvr-float">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-06.jpg" alt="Agua de proceso" title="Agua de proceso">
+										<p>Agua de proceso</p>
+									</div>
+
+									<div class="plantas-nodo hvr-float">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-07.jpg" alt="Agua Ingrediente" title="Agua Ingrediente">
+										<p>Agua Ingrediente</p>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center py-3 my-3 fs24 light white bg-blue2">
+								<div class="col-12 | col-lg-8">
+									<p class="text-center mt-3 py-3">Ofrecemos soluciones personalizadas para el tratamiento de agua con un alcance desde el mantenimiento y operación, hasta el diseño, y construcción.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-lg-5 p-0 mt-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/plantas/plantas-08.jpg" alt="Plantas de tratamiento de agua" title="Plantas de tratamiento de agua">
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-3 mt-3">
+									<p>El impacto que representan estas soluciones es:</p>
+
+									<ul>
+										<li>Económico: Ahorro de agua potable</li>
+										<li>Operativo: Impulso a economía sostenible.</li>
+										<li>Ecológico: Fomento al equilibrio ambiental (reducción de descargas de agua residual a drenaje y cuerpos de agua)</li>
+										<li>Seguridad: Bajo el cumplimiento de normas mexicanas e internacionales</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- Bebbia -->
+						<div id="bebbia" class="subtab | col-12" style="display: none;">
+							<div class="row align-items-center mb-3">
+								<div class="col-12 col-lg-5 offset-lg-1 my-3">
+									<p class="fs40 light blue2 mt-0">bebbia</p>
+									<p>bebbia® es el Servicio de Agua Purificada lista para beber, enfocada a corporativo y residencial</p>
+									<p>Buscamos cambiar la forma de tomar agua en México, ofreciendo una solución sustentable, conveniente, confiable y con un acompañamiento de principio a fin.</p>
+									<a class="rtp-btn" href="https://bebbia.com" target="_blank">Conoce más</a>
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-0 my-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/bebbia/bebbia-1.jpg" alt="bebbia" title="bebbia">
+								</div>
+							</div>
+							<div class="row flex-column-reverse flex-lg-row align-items-center my-3">
+								<div class="col-12 col-lg-5 p-0 my-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/bebbia/bebbia-2.jpg" alt="bebbia residencial" title="bebbia residencial">
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 my-3">
+									<p class="fs40 light blue2 mt-0">bebbia residencial</p>
+									<p>Creemos que debemos cambiar el paradigma de beber agua, regresar a soluciones sustentables y confiables para tomar agua directo del grifo y con la calidad y seguridad para hacerlo. Por eso bebbia ofrece un servicio integral de renta en cual tendrás agua 100% purificada.</p>
+								</div>
+							</div>
+							<div class="row align-items-center mt-3">							
+								<div class="col-12 col-lg-5 offset-lg-1 mt-3">
+									<p class="fs40 light blue2 mt-0">bebbia corporativo</p>
+									<p>Servicio de agua purificada para corporativos a través de diversas tecnologías de purificación que ofrecen agua 100% confiable y lista para beber. Ofrecemos un acompañamiento personalizado para nuestros clientes.</p>
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-0 mt-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/bebbia/bebbia-3.jpg" alt="bebbia corporativo" title="bebbia corporativo">
+								</div>
+							</div>
+						</div>
+						<!-- Bebederos -->
+						<div id="bebederos" class="subtab col-12" style="display: none;">
+							<div class="row align-items-center">
+								<div class="col-12 col-lg-5 offset-lg-1 my-3">
+									<p class="fs40 light blue2 mt-0">Bebederos</p>
+									<p>Solución de agua para beber que busca cambiar nuestra forma de hidratarnos.</p>
+									<p>Contamos con un amplio catálogo de productos y servicios que se ajustan a diferentes requerimientos considerando altura, diseño, flujo y tipo de usuarios, calidad de agua, espacio disponible, etc.</p>
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-0 my-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/bebederos/bebederos.jpg" alt="Bebederos" title="Bebederos">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 pt-3 my-3 d-flex flex-wrap align-items-center justify-content-center | justify-content-lg-evenly">
+									<div class="bebederos-nodo">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/bebederos/bebederos-1.jpg" alt="Bebederos maguey" title="Bebederos maguey">
+										<p>Bebederos maguey</p>
+										<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/bebederos/bebedero-maguey/" target="_blank" rel="noreferrer noopener">Ver producto</a>
+									</div>
+									<div class="bebederos-nodo">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/bebederos/bebederos-2.jpg" alt="Bebederos multitarja" title="Bebederos multitarja">
+										<p>Bebederos multitarja</p>
+										<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/bebederos/bebedero-multitarja/" target="_blank" rel="noreferrer noopener">Ver producto</a>
+									</div>
+									<div class="bebederos-nodo">
+										<img src="../resources/images/nuestro-portafolio/soluciones-servicios/bebederos/bebederos-3.jpg" alt="Bebedero slim" title="Bebederos slim">
+										<p>Bebedero slim</p>
+										<a class="rtp-btn bg-blue2 white hvr-float" href="https://rotoplas.com.mx/productos/purificacion/bebederos/bebedero-slim/" target="_blank" rel="noreferrer noopener">Ver producto</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Rieggo -->
+						<div id="rieggo" class="subtab col-12" style="display: none;">
+							<div class="row align-items-center">
+								<div class="col-12 col-lg-5 offset-lg-1 my-3">
+									<p class="fs40 light blue2 mt-0">Rieggo</p>
+									<p>Provee soluciones hidráulicas disruptivas para el sector agrícola, con el objetivo de gestionar eficientemente el uso del agua y mejorar el rendimiento de los cultivos.</p>
+									<a class="rtp-btn" href="https://rieggo.com" target="_blank">Conoce más</a>
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-0 mt-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/rieggo/rieggo.jpg" alt="Bebederos" title="rieggo">
+								</div>
+							</div>
+						</div>
+						<!-- Plomerisimo -->
+						<div id="plomerisimo" class="subtab col-12" style="display: none;">
+							<div class="row align-items-center">
+								<div class="col-12 col-lg-5 offset-lg-1 my-3">
+									<p class="fs40 light blue2 mt-0">Plomerísimo</p>
+									<p>Servicio de instalación, mantenimiento para sistemas de almacenamiento, esto de manera sencilla, rápida y confiable.</p>
+									<a class="rtp-btn" href="https://plomerisimo.com" target="_blank">Conoce más</a>
+								</div>
+								<div class="col-12 col-lg-5 offset-lg-1 p-0 mt-3">
+									<img class="w-100" src="../resources/images/nuestro-portafolio/soluciones-servicios/plomerisimo/plomerisimo.jpg" alt="Plomerísimo" title="Plomerísimo">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer w3-include-html="../inversionistas-footer-interno.html" class="row m-0 px-3 justify-content-between light"></footer>
+		<!-- Scripts -->
+			<!-- jQery -->
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+			<!-- Bootstrap -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+			<!-- Slick Js -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<!-- script -->
+			<script src="../js/inversionistas.js"></script>
+			<script src="../js/inversionistas-tabs.js"></script>
+			<script src="../js/papaparse.min.js"></script>
+	</body>
+</html>

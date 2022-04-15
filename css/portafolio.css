@@ -1,0 +1,140 @@
+.rtp-btn {
+	background: #009cde;
+	color: #fff;
+	padding: 0.3rem 1rem;
+	border-radius: 20px;
+	transition: all ease .3s;
+	text-decoration: none;
+}
+
+.tab-nodo-header {
+    margin-bottom: 1rem;
+}
+
+/* producto por pais */
+.producto-pais-wrapper {
+	background: #009CDE;
+	padding-left: 5%;
+	margin-bottom: 0.5rem;
+}
+.producto-pais,
+.producto-pais-btn {
+	margin-right: 5px;
+	cursor: pointer;
+	color: #fff;
+	padding: 1.3rem;
+	transition: all ease .3s;
+}
+.producto-pais:hover,
+.producto-pais-btn:hover {
+	background: #236192;
+	color: #fff;
+}
+.producto-pais-seleccion {
+	background-color: #002554;
+}
+
+/* unidad-tabs */
+.unidad-tabs {
+	padding-left: 5%;
+}
+.unidad-tab {
+	cursor: pointer;
+	padding: 1.3rem;
+	transition: all ease .3s;
+	color: #002554;
+}
+.unidad-tab:hover {
+	background: #002554;
+	color: #fff;
+}
+.unidad-tab-selected {
+	background-color: #236192;
+	color: #fff;
+}
+
+/* productos-nodo */
+.productos-nodo {
+	display: none;
+	padding: 1rem;
+	width: 15%;
+	margin: 0 2rem;
+	vertical-align: top;
+}
+.productos-nodo img {
+    width: 100%;
+}
+
+/* servicios por pais */
+.servicios-btns {
+	background: #009CDE;
+	padding-left: 5%;
+}
+.servicios-btns .subtab-selector {
+	margin-right: 5px;
+	cursor: pointer;
+	color: #fff;
+	padding: 1.3rem;
+	transition: all ease .3s;
+}
+.servicios-btns .subtab-selector:hover {
+	background: #236192;
+}
+.subtab-selector-selected {
+	background-color: #002554;
+}
+
+.plantas-nodo {
+    width: 15%;
+    padding: 1em;
+	text-align: center;
+	vertical-align: top;
+}
+.plantas-nodo img {
+    width: 100%;
+	margin-bottom: 1rem;
+}
+
+.bebederos-nodo {
+    text-align: center;
+	padding: 1rem;
+}
+.bebederos-nodo img {
+    height: 160px;
+}
+
+@media screen and (max-width: 1200px) {
+	.productos-nodo {
+		width: 20%;
+	}
+}
+@media screen and (max-width: 992px) {
+	.productos-nodo {
+		width: 20%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.productos-nodo {
+		width: 30%;
+		padding: 1rem;
+	}
+}
+@media screen and (max-width: 576px) {
+	.producto-pais-wrapper {
+		padding-left: 0;
+	}
+	.productos-nodo {
+		width: 45%;
+		margin: 0;
+		padding: 1rem .5rem;
+	}
+
+	.servicios-btns {
+		background: #009CDE;
+		padding-left: 0%;
+	}
+
+	.plantas-nodo {
+		width: 40%;
+	}
+}

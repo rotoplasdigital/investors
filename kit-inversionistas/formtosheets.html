@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form id="test-form">
+		<input type="text" name="name" id="name">
+		<input id="submit-form" type="submit" value="Enviar">
+	</form>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script>
+	jQuery(document).ready(function($){
+		// https://script.google.com/macros/s/AKfycbxp5yopRKf9aboe7OHEdAmq1s1ipPXtZIfVC6FjD0NFe_5hnz4/exec
+		var	$form = $('#test-form'),
+			url = 'https://script.google.com/macros/s/AKfycbxp5yopRKf9aboe7OHEdAmq1s1ipPXtZIfVC6FjD0NFe_5hnz4/exec'
+
+		$('#submit-form').on('click', function(e) {
+			e.preventDefault();
+			var jqxhr = $.ajax({
+				url: url,
+				method: "GET",
+				dataType: "json",
+				data: $form.serialize()
+			}).success(
+				// do something
+			);
+		})
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,580 @@
+@import "fuentes.css";
+@import "colores.css";
+@import "hover.css";
+
+
+.titulos-interior {
+	font-size: 40px;
+	font-family: 'rotoplas-light';
+}
+
+table tr {
+	min-height: 66px;
+}
+
+td {
+	vertical-align: middle;
+}
+
+.table-head-title {
+	width: 50%;
+	font-size: 40px;
+	background: #009cde !important;
+	color: #fff;
+}
+.table-head-subtitle {
+	text-align: center;
+	background: #002554 !important;
+	color: #fff;
+	vertical-align: bottom;
+}
+
+
+/* ==============================================================
+/*	MENU
+/* ============================================================== */
+	#inversionistas-navegacion {
+		background: rgb(0 37 84 / 0%);
+		transition: all ease .3s;
+		padding: 0 2rem;
+		padding-top: .5rem !important;
+		padding-bottom: .5rem !important;
+	}
+	#inversionistas-navegacion img {
+		/* width: 200px; */
+		height: 70px;
+		transition: all ease .3s;
+	}
+
+	#inversionistas-navegacion.scrolled {
+		background: rgb(0 37 84 / 60%) !important;
+		/* padding-top: 0rem !important; */
+	}
+
+	.nav-link {
+		color: rgba(255,255,255,1) !important;
+	}
+
+	#inversionistas-navegacion.menu-secundario .nav-link {
+		color: rgb(0 37 84 / 100%) !important;
+	}
+
+	#inversionistas-navegacion.menu-secundario.scrolled .nav-link {
+		color: #fff !important;
+	}
+
+	/* .primera-linea {
+		font-size: 15px;
+	}
+	.segunda-linea {
+		font-size: 13px;
+	}
+	#languageSelector {
+		font-size: 12px;
+	} */
+
+	#languageSelector {
+		color: #002554;
+		background-color: transparent;
+		background-image: url("../resources/download-blue.svg");
+		background-repeat: no-repeat;
+		background-position: right 0.75rem center;
+		background-size: 16px 12px;
+		border: 2px solid #002554;
+		border-radius: 2rem;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	#languageSelector:focus {
+		box-shadow: none;
+	}
+/* menu */
+
+
+/* ==============================================================
+/*	INICIO
+/* ============================================================== */
+	#inicio-header {
+		background: url('../resources/images/inicio/inicio-fondo.jpg') no-repeat center;
+	}
+
+	#inicio-slider {
+		color: #fff;
+		min-height: 500px;
+	}
+	.inicio-slider-nodo {
+		min-height: 500px;
+	}
+
+	#inicio-slider-nodo-1 {
+		height: 100%;
+		display: flex !important;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	#inicio-slider-nodo-1 .slider-texto {
+		width: 40%;
+		margin-left: 2rem;
+	}
+
+	@media screen and (max-width: 992px) {
+		#inicio-slider-nodo-1 .slider-texto {
+			width: 50%;
+			margin-left: 2rem;
+		}
+	}
+	@media screen and (max-width: 576px) {
+		#inicio-slider-nodo-1 .slider-texto {
+			width: calc(100% - 2rem);
+			margin-left: 1rem;
+		}
+	}
+
+	.slider-btn {
+		color: #fff;
+		padding: .5rem 1.5rem;
+		margin: .5rem;
+		border: 2px solid #fff;
+		border-radius: 2rem;
+		text-decoration: none;
+		transition: all ease .3s;
+		text-align: center;
+		font-family: rotoplas-light;
+	}
+	.slider-btn:hover {
+		color: #fff;
+		border: 2px solid #002554;
+	}
+
+	/* slick */
+		.slick-dots {
+			position: relative !important;
+			bottom: 0px !important;
+			margin-top: 1rem !important;
+		}
+
+		.slick-dots li button {
+			border: 2px solid #009cde !important;
+			border-radius: 10px !important;
+			width: 16px !important;
+			height: 16px !important;
+		}
+		.slick-dots li button:before {
+			font-size: 16px !important;
+			line-height: 24px !important;
+			top: -3px !important;
+			left: -2px !important;
+			width: 20px !important;
+			height: 20px !important;
+			opacity: 0 !important;
+			color: #009cde !important;
+		}
+		.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+			opacity: .5 !important;
+		}
+		.slick-dots li.slick-active button:before {
+			opacity: 1 !important;
+			color: #009cde !important;
+		}
+	/* slick */
+/* inicio */
+
+
+/* ==============================================================
+/*	ACERCA DE ROTOPLAS
+/* ============================================================== */
+	.acerca-nodos-wrapper a {
+		text-decoration: none;
+		color: #002554;
+	}
+	.acerca-nodos-wrapper a:hover p {
+		background: #002554;
+		color: #fff;
+	}
+	.acerca-nodos-wrapper a img {
+		width: 80px;
+	}
+	.acerca-nodos-wrapper a p {
+		padding: .25rem 1rem;
+		border-radius: 1rem;
+		border: 1px solid #002554;
+		margin-top: .5rem;
+		transition: all ease .3s;
+	}
+/* acerca de rotoplas */
+
+
+/* ==============================================================
+/*	EVENTOS RELEVANTES
+/* ============================================================== */
+	.eventos-relevantes-selector {
+		padding: .5rem 1rem;
+		border: 2px solid #002554;
+		border-radius: 2rem;
+		margin: .5rem;
+		transition: all ease .3s;
+		cursor: pointer;
+	}
+	.eventos-relevantes-selector:hover {
+		border: 2px solid #009cde;
+		background-color: #009cde;
+		color: #fff;
+	}
+	.eventos-relevantes-selector.tab-selector-selected {
+		background: #002554;
+		color: #fff;
+	}
+	.eventos-relevantes-selector.tab-selector-selected:hover {
+		background: #009cde;
+		color: #fff;
+	}
+
+	.enventos-relevantes-cabeza {
+		background-color: #009cde;
+	}
+	.enventos-relevantes-cabeza p {
+		font-size: 40px;
+	}
+
+	.tabla-eventos-relevantes {
+		margin-bottom: 50px;
+	}
+	.tabla-eventos-relevantes tbody tr td:nth-child(1) {
+		width: 120px;
+		text-align: center;
+	}
+	.tabla-eventos-relevantes tbody tr td:nth-child(3) {
+		width: 70px;
+		text-align: center;
+	}
+/* eventos relevantes */
+
+
+/* ==============================================================
+/*	INFORMACION FINANCIERA
+/* ============================================================== */
+	.informacion-financiera-selector {
+		cursor: pointer;
+	}
+
+	.informacion-financiera-selector img {
+		height: 50px;
+	}
+
+	.informacion-financiera-selector p {
+		padding: .5rem 1rem;
+		border: 2px solid #002554;
+		border-radius: 2rem;
+		margin-top: .5rem;
+		transition: all ease .3s;
+	}
+
+	.informacion-financiera-selector:hover p {
+		background: #002554;
+		color: #fff;
+	}
+
+	.informacion-financiera-selector.tab-selector-selected p {
+		background: #002554;
+		color: #fff;
+	}
+
+	.tabla-informe-anual {
+		color: #002554 !important;
+	}
+	.tabla-informe-anual-icono {
+		width: 70px;
+	}
+	.tabla-informe-anual-imagen {
+		width: 25%;
+	}
+	
+	#informe-anual > div {
+		margin-bottom: 50px;
+	}
+	
+	#informe-trimestral table {
+		margin-bottom: 50px;
+	}
+
+	#presentaciones table {
+		margin-bottom: 50px;
+	}
+	#presentaciones table tbody tr td:nth-child(odd) {
+		width: 90%;
+	}
+
+	/* informe trimestral */
+	.informacion-financiera-btns .subtab-selector-selected {
+		background: #002554;
+		color: #fff;
+	}
+	.informacion-financiera-btns div {
+		padding: 0.5rem 1rem;
+		border: 2px solid #002554;
+		border-radius: 2rem;
+		margin: 0.5rem;
+		transition: all ease .3s;
+		cursor: pointer;
+	}
+/* informacion financiera */
+
+
+/* ==============================================================
+/*	GOBIERNO CORPORATIVO
+/* ============================================================== */
+	/* consejo */
+	#consejo-nodo-01 .row:first-child {
+		background: rgba(0, 0, 0, 0.05);
+	}
+	.consejo-btns, 
+	.consejo-tabs {
+		background: #fff;
+		border-radius: 1rem;
+	}
+	.consejo-btns {
+		color: #009cde;
+	}
+	.consejo-btns div {
+		cursor: pointer;
+	}
+	.consejo-btns .subtab-selector-selected {
+		color: #002554;
+	}
+	#consejo table {
+		color: grey;
+	}
+	#consejo table thead {
+		color: #009cde;
+	}
+
+	#consejo .thirdbtab-selector-selected {
+		color: #002554;
+	}
+
+	/* directivos */
+	#directivos-nodo-01 .row:first-child {
+		background: rgba(0, 0, 0, 0.05);
+	}
+	.directivos-btns, 
+	.directivos-tabs {
+		background: #fff;
+		border-radius: 1rem;
+	}
+	.directivos-btns {
+		color: #009cde;
+	}
+	.directivos-btns div {
+		cursor: pointer;
+	}
+	.directivos-btns .subtab-selector-selected {
+		color: #002554;
+	}
+
+	#directivos .thirdbtab-selector-selected {
+		color: #002554;
+	}
+
+	#consejo-nodo-02 .row:first-child {
+		background: rgba(0, 0, 0, 0.05);
+	}
+
+	/* asamblea */
+	.asamblea-btns div {
+		padding: .5rem 2rem;
+		margin: .5rem;
+		background: #fff;
+		color: #002554;
+		border-radius: 2rem;
+		cursor: pointer;
+		transition: all ease .3s;
+	}
+	.asamblea-btns div:hover {
+		background: #236192;
+		color: #fff;
+	}
+	.asamblea-btns .subtab-selector-selected {
+		background: #002554;
+		color: #fff;
+	}
+	#asamblea table {
+		margin-bottom: 50px;
+	}
+	#asamblea table thead {
+		font-family: 'rotoplas-light';
+		color: #009cde;
+		font-size: 30px;
+	}
+
+	.eventos_date.bold.blue2 {
+		width: 120px;
+	}
+	.eventos_pdf {
+		width: 70px;
+	}
+
+	#documentos table tbody tr td:nth-child(2) {
+		width: 70px;
+	}
+
+	/* comites
+	----------- */
+	.comites-nodo { 
+		text-align: left; 
+		/* width: 60%;  */
+		margin: auto;
+		margin-top: 2rem;
+	}
+	.comites-nodo .titulo { 
+		display: block; 
+		font-size: 30px; 
+	}
+	.comites-nodo .texto { 
+		display: block; 
+		margin-bottom: 20px; 
+	}
+	.comites-nodo .categoria { 
+		display: inline-block; 
+		vertical-align: top; 
+		font-size: 20px; 
+		line-height: 20px 
+	}
+	.comites-nodo .separador { 
+		width: 6px; 
+		margin: 0 10px; 
+		vertical-align: top; 
+	}
+	.comites-nodo .directivos { 
+		display: inline-block; 
+		vertical-align: top; 
+	}
+	.comites-nodo .directivo { 
+		margin-bottom: 20px; 
+	}
+	.comites-nodo .puesto { 
+		font-size: 12px; 
+		line-height: 12px; 
+	}
+/* gobierno */
+
+
+/* ==============================================================
+/*	FOOTER
+/* ============================================================== */
+	footer {
+		background: #002554;
+		color: #fff;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.footer-btn {
+		display: block;
+		text-decoration: none;
+		padding: .25rem;
+		margin: .25rem 0;
+		color:#fff;
+		transition: all ease .3s;
+	}
+	.footer-btn:hover {
+		color:#009cde;
+	}
+
+	.footer-btn img {
+		margin-right: .5rem;
+		vertical-align: middle;
+	}
+	.footer-btn span {
+		vertical-align: top;
+		display: inline-block;
+		width: 85%;
+	}
+/* footer */
+
+
+/* ==============================================================
+/*	CALENDARIO
+/* ============================================================== */
+	.calendario-head {
+		color: #fff !important;
+		/* font-size: 24px; */
+		text-align: center;
+	}
+	.calendario-head-text {
+		color: #fff !important;
+		/* font-size: 20px; */
+		padding: 1rem !important;
+	}
+	.calendario-blue2 {
+		background-color: #009cde !important;
+	}
+	.calendario-blue5 {
+		background-color: #002554 !important;
+	}
+/* calendario */
+
+
+/* ==============================================================
+/*	CONTACTO RI
+/* ============================================================== */
+	.cobertura-analistas td {
+		color: #002554 !important;
+	}
+	.cobertura-analistas th {
+		color: #009cde;
+	}
+	/* .cobertura-analistas tbody tr:last-child {
+		background: #cecece;
+	} */
+/* contacto ri */
+
+
+/* ==============================================================
+/*	AGUA* BONO SUSTENTABLE
+/* ============================================================== */
+	.historico-dividendos {
+		color: #002554;
+	}
+	.historico-dividendos tbody tr:nth-child(odd) td:nth-child(1) {
+		background-color: #a3c3cc;
+	}
+	.historico-dividendos tbody tr:nth-child(even) td:nth-child(1) {
+		background-color: #002554;
+		color: #fff;
+	}
+
+	.bono {
+		color: #002554;
+	}
+	.bono thead {
+		color: #fff;
+	}
+	.bono thead tr th:nth-child(even) {
+		background: #002554 !important;
+	}
+	.bono thead tr th:nth-child(odd) {
+		background: #009cde !important;
+	}
+	.bono tbody tr td:nth-child(even) {
+		background: #efefef !important;
+	}
+
+	.cobertura-analistas tr {
+		height: 66px;
+	}
+/* agua bono sustentable */
+
+
+/* ==============================================================
+/*	KIT INVERSIONITAS
+/* ============================================================== */
+	#kit-inversionistas tbody tr:last-child td {
+		background-color: #002554 !important;
+		color: #ffffff !important;
+		text-align: center;
+	}
+	#kit-inversionistas tbody tr:last-child td a {
+		color: #ffffff;
+	}
+/* kit inversionistas */
