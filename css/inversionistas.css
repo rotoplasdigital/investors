@@ -290,7 +290,7 @@ td {
 		width: 25%;
 	}
 	
-	#informe-anual > div {
+	#annual-report > div {
 		margin-bottom: 50px;
 	}
 	
@@ -298,10 +298,10 @@ td {
 		margin-bottom: 50px;
 	}
 
-	#presentaciones table {
+	#presentations table {
 		margin-bottom: 50px;
 	}
-	#presentaciones table tbody tr td:nth-child(odd) {
+	#presentations table tbody tr td:nth-child(odd) {
 		width: 90%;
 	}
 
@@ -342,14 +342,14 @@ td {
 	.consejo-btns .subtab-selector-selected {
 		color: #002554;
 	}
-	#consejo table {
+	#board table {
 		color: grey;
 	}
-	#consejo table thead {
+	#board table thead {
 		color: #009cde;
 	}
 
-	#consejo .thirdbtab-selector-selected {
+	#board .thirdbtab-selector-selected {
 		color: #002554;
 	}
 

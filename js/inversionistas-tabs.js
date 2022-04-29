@@ -9,20 +9,20 @@ jQuery(document).ready(function($){
 		} else {
 			seccion = $('body')[0].getAttribute('attr')
 			//
-			if (seccion == 'nuestro-portafolio') {
-				showId = 'productos'
+			if (seccion == 'our-solutions') {
+				showId = 'products'
 				firstLoad(showId)
 			}
-			if (seccion == 'informacion-financiera') {
-				showId = 'informe-trimestral'
+			if (seccion == 'financial-information') {
+				showId = 'quarterly-information'
 				firstLoad(showId)
 			}
-			if (seccion == 'gobierno-corporativo') {
-				showId = 'consejo'
+			if (seccion == 'corporate-governance') {
+				showId = 'board'
 				firstLoad(showId)
 			}
-			if (seccion == 'sustentabilidad') {
-				showId = 'estrategia'
+			if (seccion == 'sustainability') {
+				showId = 'strategy'
 				firstLoad(showId)
 			}
 		}
@@ -48,8 +48,8 @@ jQuery(document).ready(function($){
 			$('.tab:visible').each(function(){
 				$(this).fadeOut('fast', function(){
 					$('#' + tabClicked).fadeIn(function(){
-						if (tabClicked == "ods") {
-							console.log('ODS')
+						if (tabClicked == "sdgs") {
+							console.log('SDGs')
 							// botones - nav
 							$("#contribucion-btn-wrapper").slick({
 								slidesToShow: 3,
