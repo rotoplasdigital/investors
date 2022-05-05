@@ -40,8 +40,8 @@ function includeHTML() {
 		$('.primera-linea').css('display','none');
 	}
 	// Cambio de Idioma
-	const protocolo = 'http:' //https
-	const dominio = '127.0.0.1:5500' //rotoplas.com
+	const protocolo = 'https:' //https
+	const dominio = 'rotoplas.com' //127.0.0.1:5500
 	var subdominio = ''
 	var selectUrl = ''
 	document.getElementById('languageSelector').onchange = function(){
