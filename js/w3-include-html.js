@@ -51,70 +51,70 @@ function includeHTML() {
 			subdominio = 'investors'
 			switch (selectUrl) {
 				case protocolo+'//'+dominio+'/inversionistas/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/'
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/'
 					break
-				case protocolo+'//'+dominio+'/acerca-de-rotoplas/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/about-rotoplas/'
+				case protocolo+'//'+dominio+'/inversionistas/acerca-de-rotoplas/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/about-rotoplas/'
 					break
-				case protocolo+'//'+dominio+'/nuestro-portafolio/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/our-solutions/'
+				case protocolo+'//'+dominio+'/inversionistas/nuestro-portafolio/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/our-solutions/'
 					break
-				case protocolo+'//'+dominio+'/nuestro-portafolio/#productos':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/our-solutions/#products'
+				case protocolo+'//'+dominio+'/inversionistas/nuestro-portafolio/#productos':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/our-solutions/#products'
 					break
-				case protocolo+'//'+dominio+'/nuestro-portafolio/#servicios':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/our-solutions/#services'
+				case protocolo+'//'+dominio+'/inversionistas/nuestro-portafolio/#servicios':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/our-solutions/#services'
 					break
-				case protocolo+'//'+dominio+'/informacion-financiera/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/'
+				case protocolo+'//'+dominio+'/inversionistas/informacion-financiera/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/'
 					break
-				case protocolo+'//'+dominio+'/informacion-financiera/#quarterly-information':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/#quarterly-information'
+				case protocolo+'//'+dominio+'/inversionistas/informacion-financiera/#quarterly-information':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/#quarterly-information'
 					break
-				case protocolo+'//'+dominio+'/informacion-financiera/#presentations':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/#presentations'
+				case protocolo+'//'+dominio+'/inversionistas/informacion-financiera/#presentations':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/#presentations'
 					break
-				case protocolo+'//'+dominio+'/informacion-financiera/#annual-report':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/#annual-report'
+				case protocolo+'//'+dominio+'/inversionistas/informacion-financiera/#annual-report':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/financial-information/#annual-report'
 					break
-				case protocolo+'//'+dominio+'/eventos-relevantes/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/press-releases/'
+				case protocolo+'//'+dominio+'/inversionistas/eventos-relevantes/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/press-releases/'
 					break
-				case protocolo+'//'+dominio+'/gobierno-corporativo/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/'
+				case protocolo+'//'+dominio+'/inversionistas/gobierno-corporativo/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/'
 					break
-				case protocolo+'//'+dominio+'/gobierno-corporativo/#board':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/#board'
+				case protocolo+'//'+dominio+'/inversionistas/gobierno-corporativo/#board':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/#board'
 					break
-				case protocolo+'//'+dominio+'/gobierno-corporativo/#meeting':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/#meeting'
+				case protocolo+'//'+dominio+'/inversionistas/gobierno-corporativo/#meeting':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/#meeting'
 					break
-				case protocolo+'//'+dominio+'/gobierno-corporativo/#documents':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/#documents'
+				case protocolo+'//'+dominio+'/inversionistas/gobierno-corporativo/#documents':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/corporate-governance/#documents'
 					break
-				case protocolo+'//'+dominio+'/sustentabilidad/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/'
+				case protocolo+'//'+dominio+'/inversionistas/sustentabilidad/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/'
 					break
-				case protocolo+'//'+dominio+'/sustentabilidad/#strategy':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/#strategy'
+				case protocolo+'//'+dominio+'/inversionistas/sustentabilidad/#strategy':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/#strategy'
 					break
-				case protocolo+'//'+dominio+'/sustentabilidad/#sdgs':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/#sdgs'
+				case protocolo+'//'+dominio+'/inversionistas/sustentabilidad/#sdgs':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/#sdgs'
 					break
-				case protocolo+'//'+dominio+'/sustentabilidad/#policies':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/#policies'
+				case protocolo+'//'+dominio+'/inversionistas/sustentabilidad/#policies':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustainability/#policies'
 					break
-				case protocolo+'//'+dominio+'/agua-bono-sustentable/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/agua-sustainable-bond/'
+				case protocolo+'//'+dominio+'/inversionistas/agua-bono-sustentable/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/agua-sustainable-bond/'
 					break
-				case protocolo+'//'+dominio+'/calendario/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/calendar/'
+				case protocolo+'//'+dominio+'/inversionistas/calendario/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/calendar/'
 					break
-				case protocolo+'//'+dominio+'/contacto-ri/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/ir-contact/'
+				case protocolo+'//'+dominio+'/inversionistas/contacto-ri/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/ir-contact/'
 					break
-				case protocolo+'//'+dominio+'/kit-inversionistas/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/investor-kit/'
+				case protocolo+'//'+dominio+'/inversionistas/kit-inversionistas/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/investor-kit/'
 					break
 				default:
 					console.log("Sin mandados")
@@ -124,70 +124,70 @@ function includeHTML() {
 			subdominio = 'inversionistas'
 			switch (selectUrl) {
 				case protocolo+'//'+dominio+'/investors/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/'
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/'
 					break
-				case protocolo+'//'+dominio+'/about-rotoplas/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/acerca-de-rotoplas/'
+				case protocolo+'//'+dominio+'/investors/about-rotoplas/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/acerca-de-rotoplas/'
 					break
-				case protocolo+'//'+dominio+'/our-solutions/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/nuestro-portafolio/'
+				case protocolo+'//'+dominio+'/investors/our-solutions/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/nuestro-portafolio/'
 					break
-				case protocolo+'//'+dominio+'/our-solutions/#productos':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/nuestro-portafolio/#productos'
+				case protocolo+'//'+dominio+'/investors/our-solutions/#productos':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/nuestro-portafolio/#productos'
 					break
-				case protocolo+'//'+dominio+'/our-solutions/#servicios':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/nuestro-portafolio/#servicios'
+				case protocolo+'//'+dominio+'/investors/our-solutions/#servicios':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/nuestro-portafolio/#servicios'
 					break
-				case protocolo+'//'+dominio+'/financial-information/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/'
+				case protocolo+'//'+dominio+'/investors/financial-information/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/'
 					break
-				case protocolo+'//'+dominio+'/financial-information/#quarterly-information':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/#quarterly-information'
+				case protocolo+'//'+dominio+'/investors/financial-information/#quarterly-information':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/#quarterly-information'
 					break
-				case protocolo+'//'+dominio+'/financial-information/#presentations':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/#presentations'
+				case protocolo+'//'+dominio+'/investors/financial-information/#presentations':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/#presentations'
 					break
-				case protocolo+'//'+dominio+'/financial-information/#annual-report':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/#annual-report'
+				case protocolo+'//'+dominio+'/investors/financial-information/#annual-report':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/informacion-financiera/#annual-report'
 					break
-				case protocolo+'//'+dominio+'/press-releases/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/eventos-relevantes/'
+				case protocolo+'//'+dominio+'/investors/press-releases/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/eventos-relevantes/'
 					break
-				case protocolo+'//'+dominio+'/corporate-governance/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/'
+				case protocolo+'//'+dominio+'/investors/corporate-governance/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/'
 					break
-				case protocolo+'//'+dominio+'/corporate-governance/#board':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/#board'
+				case protocolo+'//'+dominio+'/investors/corporate-governance/#board':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/#board'
 					break
-				case protocolo+'//'+dominio+'/corporate-governance/#meeting':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/#meeting'
+				case protocolo+'//'+dominio+'/investors/corporate-governance/#meeting':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/#meeting'
 					break
-				case protocolo+'//'+dominio+'/corporate-governance/#documents':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/#documents'
+				case protocolo+'//'+dominio+'/investors/corporate-governance/#documents':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/gobierno-corporativo/#documents'
 					break
-				case protocolo+'//'+dominio+'/sustainability/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/'
+				case protocolo+'//'+dominio+'/investors/sustainability/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/'
 					break
-				case protocolo+'//'+dominio+'/sustainability/#strategy':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/#strategy'
+				case protocolo+'//'+dominio+'/investors/sustainability/#strategy':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/#strategy'
 					break
-				case protocolo+'//'+dominio+'/sustainability/#sdgs':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/#sdgs'
+				case protocolo+'//'+dominio+'/investors/sustainability/#sdgs':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/#sdgs'
 					break
-				case protocolo+'//'+dominio+'/sustainability/#policies':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/#policies'
+				case protocolo+'//'+dominio+'/investors/sustainability/#policies':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/sustentabilidad/#policies'
 					break
-				case protocolo+'//'+dominio+'/agua-sustainable-bond/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/agua-bono-sustentable/'
+				case protocolo+'//'+dominio+'/investors/agua-sustainable-bond/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/agua-bono-sustentable/'
 					break
-				case protocolo+'//'+dominio+'/calendar/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/calendario/'
+				case protocolo+'//'+dominio+'/investors/calendar/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/calendario/'
 					break
-				case protocolo+'//'+dominio+'/ir-contact/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/contacto-ri/'
+				case protocolo+'//'+dominio+'/investors/ir-contact/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/contacto-ri/'
 					break
-				case protocolo+'//'+dominio+'/investor-kit/':
-					//window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/kit-inversionistas/'
+				case protocolo+'//'+dominio+'/investors/investor-kit/':
+					window.location.href = protocolo+'//'+dominio+'/'+subdominio+'/kit-inversionistas/'
 					break
 				default:
 					console.log("Sin mandados")

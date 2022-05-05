@@ -128,7 +128,8 @@
 										tabHead.setAttribute('id','tab-head-'+year+'-'+dataCell[1])
 										tabHead.setAttribute('class','enventos-relevantes-cabeza')
 										tabDiv.appendChild(tabHead)
-										document.getElementById('tab-head-'+year+'-'+dataCell[1]).innerHTML = '<p class="d-inline-block m-0 p-3 light white bg-blue5" style="width:120px">'+dataCell[1]+'T'+year.slice(year.length - 2)+'</p>'
+										// T / Q
+										document.getElementById('tab-head-'+year+'-'+dataCell[1]).innerHTML = '<p class="d-inline-block m-0 p-3 light white bg-blue5" style="width:120px">'+dataCell[1]+'Q'+year.slice(year.length - 2)+'</p>'
 									}
 									// se agrega la tabla
 									if( !document.getElementById('table-'+year+'-'+dataCell[1])) {

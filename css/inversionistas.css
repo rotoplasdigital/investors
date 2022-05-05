@@ -398,10 +398,11 @@ td {
 		background: #002554;
 		color: #fff;
 	}
-	#asamblea table {
+	/*asamblea*/
+	#meeting table {
 		margin-bottom: 50px;
 	}
-	#asamblea table thead {
+	#meeting table thead {
 		font-family: 'rotoplas-light';
 		color: #009cde;
 		font-size: 30px;
