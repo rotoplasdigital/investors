@@ -172,6 +172,14 @@ jQuery(document).ready(function($){
 
 				//imagen_head = document.getElementById('head-' + the_tab);
 
+				if (the_tab === "conduccion" && pais === "PE") {
+					console.log('Pipping PE')
+					document.getElementById('conduccion-descriptivo').innerHTML = 'Hydraulic pipes guarantee zero leakage. It also includes a wide variety of pipes, connections, and tools to cover all the needs of hydraulic installation in single-family, affordable housing, and residential homes, as well as high-rises, industrial buildings, ships, and others.'
+					/* Hydraulic pipes guarantee zero leakage<!-- as they fuse connections by using an advanced thermofusion system turning them into a single high resistance piece of pipe -->. It also includes a wide variety of pipes, connections, and tools to cover all the needs of hydraulic installation in single-family, affordable housing, and residential homes, as well as high-rises, industrial buildings, ships, and others. */
+				} else {
+					document.getElementById('conduccion-descriptivo').innerHTML = 'Hydraulic pipes guarantee zero leakage as they fuse connections by using an advanced thermofusion system turning them into a single high resistance piece of pipe. It also includes a wide variety of pipes, connections, and tools to cover all the needs of hydraulic installation in single-family, affordable housing, and residential homes, as well as high-rises, industrial buildings, ships, and others.'
+				}
+
 				if (the_tab === "calentamiento" && pais === "AR") {
 					document.getElementById('head-' + the_tab).src="https://rotoplas.com/rtp-resources/soluciones-productos/calentamiento-AR-head.jpg";
 				} else if (the_tab == "calentamiento" && pais=="MX") {
