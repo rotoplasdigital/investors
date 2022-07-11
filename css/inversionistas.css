@@ -95,6 +95,11 @@ td {
 /* ==============================================================
 /*	INICIO
 /* ============================================================== */
+	#popup-inicio {
+		width: 90%;
+		padding: 0;
+	}
+
 	#inicio-header {
 		background: url('../resources/images/inicio/inicio-fondo.jpg') no-repeat center;
 	}

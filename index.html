@@ -11,6 +11,8 @@
 		<!-- Slick / Slider CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- fancybox -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 		<!-- Js -->
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="js/w3-include-html.js"></script>
@@ -47,6 +49,12 @@
 		</div>
 		<!-- Footer -->
 		<footer w3-include-html="inversionistas-footer.html" class="row m-0 px-3 justify-content-xl-center light"></footer>
+		<!-- Popup -->
+		<div id="popup-inicio" style="display: none;">
+			<a href="https://rotoplas.zoom.us/webinar/register/WN_Ga863MmJT2KxgSBEQgldVQ" target="_blank">
+				<img class="w-100" src="https://rotoplas.com/investors/resources/images/inicio/Invitation_Webcast_2Q22.png" alt="Image Invitation" title="Invitation Webcast 2Q22">
+			</a>
+		</div>
 		<!-- Scripts -->
 			<!-- jQery -->
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -54,7 +62,17 @@
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 			<!-- Slick Js -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<!-- Fancybox -->
+			<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 			<!-- script -->
 			<script src="js/inversionistas.js"></script>
+			<script>
+				Fancybox.show([
+					{ 
+						src: "#popup-inicio",
+						type: "inline"
+					}
+				]);
+			</script>
 	</body>
 </html>
